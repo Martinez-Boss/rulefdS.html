@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rules Discord</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <style>
+    /* Styles CSS pour la page */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Russo One', sans-serif;
+      background: linear-gradient(to right, #1c1c1c, #2b2b2b);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: #5865F2;
+      padding: 30px;
+      text-align: center;
+      font-size: 3rem;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      letter-spacing: 2px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      background: #404eed;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #cdd0ff;
+    }
+    main {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.05);
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    h2 {
+      color: #f5c518;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #5865F2;
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .contact {
+      text-align: center;
+    }
+    .contact a {
+      color: white;
+      background: #5865F2;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background 0.3s;
+    }
+    .contact a:hover {
+      background: #4752c4;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: #aaa;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>Rules Discord</header>
+  <nav>
+    <a href="#" onclick="changeLanguage('fr')">Français</a>
+    <a href="#" onclick="changeLanguage('en')">English</a>
+    <a href="#" onclick="changeLanguage('ar')">العربية</a>
+  </nav>
+  
+  <main id="content">
+    <!-- Content will change based on selected language -->
+  </main>
+  
+  <footer>
+    © 2025 Rules Discord - Tous droits réservés
+  </footer>
+
+  <script>
+    // Change language function
+    function changeLanguage(language) {
+      let content = document.getElementById('content');
+      
+      if (language === 'fr') {
+        content.innerHTML = `
+          <section>
+            <h2>Règles Générales</h2>
+            <ul>
+              <li>Respecter tous les membres du serveur.</li>
+              <li>Pas de spam ou flood dans les canaux.</li>
+              <li>Éviter les sujets sensibles (politique, religion, etc.).</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Comportement</h2>
+            <ul>
+              <li>Pas d'insultes ou de propos haineux.</li>
+              <li>Rester poli, même en cas de désaccord.</li>
+              <li>Utiliser les salons de façon appropriée.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Sécurité & Confidentialité</h2>
+            <ul>
+              <li>Ne partagez pas d'informations personnelles.</li>
+              <li>Signalez tout comportement suspect aux modérateurs.</li>
+              <li>Ne cliquez pas sur des liens suspects.</li>
+            </ul>
+          </section>
+          <section class="contact">
+            <h2>Rejoins notre serveur</h2>
+            <a href="https://discord.gg/tonlien" target="_blank">Rejoindre le Discord</a>
+          </section>
+        `;
+      } else if (language === 'en') {
+        content.innerHTML = `
+          <section>
+            <h2>General Rules</h2>
+            <ul>
+              <li>Respect all server members.</li>
+              <li>No spam or flooding in channels.</li>
+              <li>Avoid sensitive topics like politics and religion.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Behavior</h2>
+            <ul>
+              <li>No hate speech or insults.</li>
+              <li>Be polite even when disagreeing.</li>
+              <li>Use channels appropriately.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Security & Privacy</h2>
+            <ul>
+              <li>Do not share personal information.</li>
+              <li>Report any suspicious behavior to moderators.</li>
+              <li>Do not click on suspicious links.</li>
+            </ul>
+          </section>
+          <section class="contact">
+            <h2>Join our server</h2>
+            <a href="https://discord.gg/yourlink" target="_blank">Join the Discord</a>
+          </section>
+        `;
+      } else if (language === 'ar') {
+        content.innerHTML = `
+          <section>
+            <h2>القواعد العامة</h2>
+            <ul>
+              <li>احترام جميع أعضاء السيرفر.</li>
+              <li>عدم إرسال الرسائل المكررة أو الغمر.</li>
+              <li>تجنب المواضيع الحساسة مثل السياسة والدين.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>السلوك</h2>
+            <ul>
+              <li>لا يُسمح بالكلام البغيض أو الشتائم.</li>
+              <li>كن مؤدبًا حتى في حالة الخلاف.</li>
+              <li>استخدم القنوات بشكل مناسب.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>الأمان والخصوصية</h2>
+            <ul>
+              <li>لا تشارك معلوماتك الشخصية.</li>
+              <li>أبلغ عن أي سلوك مشبوه إلى المشرفين.</li>
+              <li>لا تضغط على الروابط المشبوهة.</li>
+            </ul>
+          </section>
+          <section class="contact">
+            <h2>انضم إلى سيرفرنا</h2>
+            <a href="https://discord.gg/9zYARRBefZ" target="_blank">انضم إلى ديسكورد</a>
+          </section>
+        `;
+      }
+    }
+
+    // Set default language to French
+    changeLanguage('fr');
+  </script>
+</body>
+</html>
+
+
+
+
