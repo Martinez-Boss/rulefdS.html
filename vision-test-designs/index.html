@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VisionCare Design Portfolio - Interview Deliverables</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 50px;
+    }
+
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .header p {
+      font-size: 20px;
+      opacity: 0.95;
+    }
+
+    .deliverables {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-number {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      color: #2d3748;
+      margin-bottom: 10px;
+    }
+
+    .card .dimensions {
+      font-size: 14px;
+      color: #718096;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: #4a5568;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .card ul li {
+      color: #4a5568;
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-weight: 700;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 12px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .info-section {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      margin-bottom: 30px;
+    }
+
+    .info-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 32px;
+      color: #2d3748;
+      margin-bottom: 20px;
+    }
+
+    .info-section h3 {
+      font-size: 20px;
+      color: #4a5568;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .info-section p, .info-section li {
+      color: #4a5568;
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+
+    .info-section ul {
+      margin-left: 20px;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .spec-item {
+      background: #f7fafc;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #667eea;
+    }
+
+    .spec-item strong {
+      color: #2d3748;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      text-align: center;
+      color: white;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    .footer p {
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .customization-note {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .customization-note strong {
+      color: #856404;
+    }
+
+    .customization-note p {
+      color: #856404;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>VisionCare Design Portfolio</h1>
+      <p>Interview Deliverables - Eye & Vision Testing Product</p>
+    </div>
+
+    <div class="deliverables">
+      <!-- Gift Card -->
+      <div class="card">
+        <div class="card-number">1</div>
+        <h2>Gift Card</h2>
+        <div class="dimensions">13.1 cm × 10.1 cm (5.16" × 3.98")</div>
+        <p>Premium gift card design with integrated scratch-off area for product code redemption.</p>
+        <ul>
+          <li>Professional gradient design</li>
+          <li>Embedded scratch card section</li>
+          <li>Clear redemption instructions</li>
+          <li>Brand identity elements</li>
+          <li>Validity information</li>
+        </ul>
+        <a href="gift-card.html" class="btn" target="_blank">View Design</a>
+      </div>
+
+      <!-- Scratch Card -->
+      <div class="card">
+        <div class="card-number">2</div>
+        <h2>Scratch Card</h2>
+        <div class="dimensions">8.56 cm × 5.398 cm (Credit Card Size)</div>
+        <p>Standalone scratch card with front and back designs, featuring brand name and redemption URL.</p>
+        <ul>
+          <li>Credit card standard size</li>
+          <li>Front: Brand, scratch area, URL</li>
+          <li>Back: Instructions & details</li>
+          <li>Professional finish</li>
+          <li>Easy to carry format</li>
+        </ul>
+        <a href="scratch-card.html" class="btn" target="_blank">View Design</a>
+      </div>
+
+      <!-- Poster -->
+      <div class="card">
+        <div class="card-number">3</div>
+        <h2>Marketing Poster</h2>
+        <div class="dimensions">18" × 24" (45.72 cm × 60.96 cm)</div>
+        <p>Eye-catching retail poster showcasing product benefits and driving customer engagement.</p>
+        <ul>
+          <li>Large format for visibility</li>
+          <li>Key benefits highlighted</li>
+          <li>Strong call-to-action</li>
+          <li>Professional healthcare aesthetic</li>
+          <li>Gift card promotion</li>
+        </ul>
+        <a href="poster.html" class="btn" target="_blank">View Design</a>
+      </div>
+    </div>
+
+    <!-- Technical Specifications -->
+    <div class="info-section">
+      <h2>Technical Specifications</h2>
+      
+      <div class="specs-grid">
+        <div class="spec-item">
+          <strong>Design Format</strong>
+          HTML/CSS for precise dimensional control and easy customization
+        </div>
+        <div class="spec-item">
+          <strong>Color Scheme</strong>
+          Professional gradient (Purple to Blue) suitable for healthcare branding
+        </div>
+        <div class="spec-item">
+          <strong>Typography</strong>
+          Google Fonts (Inter & Poppins) for modern, readable design
+        </div>
+        <div class="spec-item">
+          <strong>Print Ready</strong>
+          Exact dimensions with proper scaling and print media queries
+        </div>
+      </div>
+
+      <h3>Design Features</h3>
+      <ul>
+        <li><strong>Gift Card:</strong> Features a scratch-off area placeholder, brand identity, website URL, and validity information</li>
+        <li><strong>Scratch Card:</strong> Includes both front and back designs with redemption instructions</li>
+        <li><strong>Poster:</strong> Highlights 4 key benefits with clear call-to-action and gift card availability</li>
+      </ul>
+
+      <h3>Customization Points</h3>
+      <ul>
+        <li>Brand name: Currently "VisionCare" (easily replaceable)</li>
+        <li>Website URL: Currently "visioncare-test.com" (placeholder)</li>
+        <li>Color scheme: Purple-blue gradient (customizable via CSS)</li>
+        <li>Product codes: Format XXXX-XXXX-XXXX (placeholder)</li>
+        <li>Marketing copy: All text is editable in HTML</li>
+      </ul>
+
+      <h3>How to Print</h3>
+      <ul>
+        <li>Open each HTML file in a modern web browser (Chrome, Firefox, Safari)</li>
+        <li>Use Print function (Ctrl+P / Cmd+P)</li>
+        <li>Set margins to "None" or "Minimum"</li>
+        <li>Enable "Background graphics"</li>
+        <li>Choose appropriate paper size matching the design dimensions</li>
+        <li>For professional printing, export as PDF and send to print shop</li>
+      </ul>
+
+      <div class="customization-note">
+        <strong>Note:</strong>
+        <p>All designs use placeholder content. Brand name, URLs, and marketing copy should be customized to match your actual product and company information before printing.</p>
+      </div>
+    </div>
+
+    <!-- Project Info -->
+    <div class="info-section">
+      <h2>About This Project</h2>
+      <p>This design portfolio was created as interview deliverables for an eye and vision testing product. The designs focus on:</p>
+      <ul>
+        <li><strong>Professional Healthcare Aesthetic:</strong> Clean, trustworthy design suitable for medical/vision products</li>
+        <li><strong>User Experience:</strong> Clear instructions and easy-to-understand redemption process</li>
+        <li><strong>Marketing Impact:</strong> Eye-catching poster design that communicates key benefits</li>
+        <li><strong>Brand Consistency:</strong> Unified design language across all three deliverables</li>
+        <li><strong>Print Production:</strong> Exact dimensions and print-ready specifications</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p><strong>VisionCare Design Portfolio</strong></p>
+      <p>Interview Deliverables - 2025</p>
+      <p>All designs are customizable and print-ready</p>
+    </div>
+  </div>
+</body>
+</html>

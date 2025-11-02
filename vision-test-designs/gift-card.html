@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Test Gift Card - 13.1cm x 10.1cm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .gift-card {
+      width: 13.1cm;
+      height: 10.1cm;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Decorative elements */
+    .gift-card::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .gift-card::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      width: 150px;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 15px;
+    }
+
+    .brand-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      margin-bottom: 5px;
+    }
+
+    .tagline {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .gift-message {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .gift-message h2 {
+      font-size: 16px;
+      color: white;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .gift-message p {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.95);
+      line-height: 1.4;
+    }
+
+    .scratch-card-area {
+      background: white;
+      border-radius: 8px;
+      padding: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border: 2px dashed #667eea;
+    }
+
+    .scratch-label {
+      font-size: 10px;
+      color: #667eea;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .scratch-placeholder {
+      background: linear-gradient(135deg, #c0c0c0 0%, #a0a0a0 100%);
+      border-radius: 6px;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scratch-placeholder::before {
+      content: 'SCRATCH HERE';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.8);
+      letter-spacing: 2px;
+    }
+
+    .code-format {
+      font-size: 20px;
+      font-weight: 700;
+      color: transparent;
+      letter-spacing: 3px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .website {
+      font-size: 11px;
+      color: white;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 6px 12px;
+      border-radius: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    .validity {
+      font-size: 9px;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: right;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        margin: 0;
+      }
+
+      .gift-card {
+        box-shadow: none;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gift-card">
+    <div class="card-content">
+      <div class="header">
+        <div class="brand-name">VisionCare</div>
+        <div class="tagline">Professional Eye & Vision Testing</div>
+      </div>
+
+      <div class="main-content">
+        <div class="gift-message">
+          <h2>🎁 Gift of Clear Vision</h2>
+          <p>This card entitles you to a comprehensive online eye and vision test. Redeem your code online for instant access to professional vision assessment.</p>
+        </div>
+
+        <div class="scratch-card-area">
+          <div class="scratch-label">Scratch to reveal your code</div>
+          <div class="scratch-placeholder">
+            <div class="code-format">XXXX-XXXX-XXXX</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="website">www.visioncare-test.com</div>
+        <div class="validity">Valid for 12 months<br>from date of purchase</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

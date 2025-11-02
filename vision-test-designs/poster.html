@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Test Marketing Poster - 18x24 inches</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #e5e5e5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .poster {
+      width: 18in;
+      height: 24in;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Decorative background elements */
+    .bg-circle-1 {
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 500px;
+      height: 500px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .bg-circle-2 {
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+    }
+
+    .bg-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.05;
+      background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);
+    }
+
+    .poster-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 60px;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .brand-logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 72px;
+      font-weight: 900;
+      color: white;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+      margin-bottom: 10px;
+      letter-spacing: -2px;
+    }
+
+    .brand-tagline {
+      font-size: 28px;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .headline {
+      font-family: 'Poppins', sans-serif;
+      font-size: 64px;
+      font-weight: 800;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .subheadline {
+      font-size: 32px;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 500;
+      margin-bottom: 60px;
+      line-height: 1.4;
+      max-width: 800px;
+    }
+
+    /* Benefits Section */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 60px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .benefit-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 35px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .benefit-icon {
+      font-size: 56px;
+      margin-bottom: 15px;
+    }
+
+    .benefit-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .benefit-description {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.5;
+    }
+
+    /* Call to Action */
+    .cta-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta-box {
+      background: white;
+      border-radius: 25px;
+      padding: 50px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      display: inline-block;
+      max-width: 700px;
+    }
+
+    .cta-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      color: #667eea;
+      margin-bottom: 20px;
+    }
+
+    .cta-text {
+      font-size: 24px;
+      color: #4a5568;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+
+    .website-large {
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #764ba2;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .gift-card-visual {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 15px;
+      padding: 20px 40px;
+      display: inline-block;
+      margin-top: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .gift-card-text {
+      font-size: 22px;
+      color: white;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .footer-text {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        margin: 0;
+      }
+
+      .poster {
+        box-shadow: none;
+      }
+
+      @page {
+        size: 18in 24in;
+        margin: 0;
+      }
+    }
+
+    /* Responsive scaling for screen preview */
+    @media screen and (max-width: 1400px) {
+      .poster {
+        transform: scale(0.5);
+        transform-origin: center;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .poster {
+        transform: scale(0.3);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <div class="bg-circle-1"></div>
+    <div class="bg-circle-2"></div>
+    <div class="bg-pattern"></div>
+
+    <div class="poster-content">
+      <!-- Header -->
+      <div class="header">
+        <div class="brand-logo">VisionCare</div>
+        <div class="brand-tagline">PROFESSIONAL EYE & VISION TESTING</div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h1 class="headline">
+          See Clearly,<br>
+          Live Better
+        </h1>
+        
+        <p class="subheadline">
+          Professional eye testing from the comfort of your home.<br>
+          Get your vision tested online today!
+        </p>
+
+        <!-- Benefits Grid -->
+        <div class="benefits">
+          <div class="benefit-card">
+            <div class="benefit-icon">⚡</div>
+            <div class="benefit-title">Quick & Easy</div>
+            <div class="benefit-description">Complete your test in just 15 minutes</div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">🏠</div>
+            <div class="benefit-title">From Home</div>
+            <div class="benefit-description">No appointment needed, test anytime</div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">✓</div>
+            <div class="benefit-title">Professional</div>
+            <div class="benefit-description">Clinically validated testing methods</div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">📊</div>
+            <div class="benefit-title">Instant Results</div>
+            <div class="benefit-description">Get your results immediately</div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+          <div class="cta-box">
+            <div class="cta-title">Get Started Today!</div>
+            <div class="cta-text">Purchase a gift card and redeem online</div>
+            <div class="website-large">visioncare-test.com</div>
+            <div class="gift-card-visual">
+              <div class="gift-card-text">🎁 GIFT CARDS AVAILABLE HERE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-text">
+          Perfect gift for family and friends • Valid for 12 months
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

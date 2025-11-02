@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Test Scratch Card - Credit Card Size</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .scratch-card {
+      width: 8.56cm;
+      height: 5.398cm;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 8px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Front side */
+    .card-front {
+      padding: 15px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Decorative pattern */
+    .card-front::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .card-header {
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand-logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      margin-bottom: 3px;
+    }
+
+    .brand-subtitle {
+      font-size: 9px;
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .card-middle {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scratch-area {
+      background: linear-gradient(135deg, #c0c0c0 0%, #a0a0a0 100%);
+      border-radius: 6px;
+      padding: 20px 15px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .scratch-area::before {
+      content: 'SCRATCH TO REVEAL';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 1.5px;
+    }
+
+    .hidden-code {
+      font-size: 18px;
+      font-weight: 700;
+      color: transparent;
+      letter-spacing: 2px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .card-footer {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .website-url {
+      font-size: 10px;
+      color: white;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 5px 10px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+    }
+
+    .card-icon {
+      width: 30px;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      backdrop-filter: blur(5px);
+    }
+
+    /* Back side */
+    .scratch-card.back {
+      background: white;
+      padding: 15px;
+    }
+
+    .back-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .magnetic-strip {
+      background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+      height: 40px;
+      margin: -15px -15px 15px -15px;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .instructions {
+      flex: 1;
+      padding: 10px;
+      background: #f7fafc;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .instructions h3 {
+      font-size: 11px;
+      color: #2d3748;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .instructions ol {
+      font-size: 9px;
+      color: #4a5568;
+      line-height: 1.6;
+      padding-left: 15px;
+    }
+
+    .instructions li {
+      margin-bottom: 4px;
+    }
+
+    .back-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .back-brand {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #667eea;
+    }
+
+    .back-url {
+      font-size: 9px;
+      color: #718096;
+      font-weight: 600;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 14px;
+      color: #4a5568;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        gap: 1cm;
+      }
+
+      .scratch-card {
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+
+      .section-title {
+        page-break-before: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Front Side -->
+    <div>
+      <div class="section-title">FRONT SIDE</div>
+      <div class="scratch-card">
+        <div class="card-front">
+          <div class="card-header">
+            <div class="brand-logo">VisionCare</div>
+            <div class="brand-subtitle">Eye & Vision Testing</div>
+          </div>
+
+          <div class="card-middle">
+            <div class="scratch-area">
+              <div class="hidden-code">XXXX-XXXX-XXXX</div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="website-url">visioncare-test.com</div>
+            <div class="card-icon">👁️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back Side -->
+    <div>
+      <div class="section-title">BACK SIDE</div>
+      <div class="scratch-card back">
+        <div class="back-content">
+          <div class="magnetic-strip"></div>
+          
+          <div class="instructions">
+            <h3>HOW TO REDEEM YOUR CODE:</h3>
+            <ol>
+              <li>Visit <strong>www.visioncare-test.com</strong></li>
+              <li>Click on "Redeem Gift Card"</li>
+              <li>Scratch off the silver panel to reveal your unique code</li>
+              <li>Enter your code and start your vision test</li>
+              <li>Complete the test and receive your results instantly</li>
+            </ol>
+          </div>
+
+          <div class="back-footer">
+            <div class="back-brand">VisionCare</div>
+            <div class="back-url">www.visioncare-test.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
